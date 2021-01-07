@@ -16,7 +16,7 @@ Once in a day trigger script via `Scheduler` (if `HEROKU`)
 - install `python3.8`
 - Either:
     - create environment variables `YNAB_TOKEN` and `CCAPI_TOKEN` with corresponding values
-    - create Config.cfg in `main.py`'s directory as example given
+    - create `CONFIG.cfg` in `main.py`'s directory as example given
 - `pip install -r requitements.txt`
 - `python main.py`
 
@@ -29,5 +29,11 @@ Claim [here](https://free.currencyconverterapi.com/) (free) via email.
 Claim [here](https://app.youneedabudget.com/settings/developer) via YNAB accound
 (paid subscription except trial or college).
 
+## Config file structure
+```
+[COMMON]
+YNAB_TOKEN=<YNAB_TOKEN>
+CCAPI_TOKEN=<CCAPI_TOKEN>
+```
 ## License
 License available at [LICENSE.md](LICENSE.md)
