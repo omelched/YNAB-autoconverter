@@ -6,7 +6,7 @@ from logging.handlers import TimedRotatingFileHandler
 
 FORMATTER = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s")
 
-LOG_FILE = "logs/neuro.log"
+LOG_FILE = "logs/YNAB-autoconverter.log"
 
 
 def _get_console_handler():

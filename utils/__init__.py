@@ -17,24 +17,14 @@ class LoggedBaseException(BaseException):
 
 
 class Config(configparser.ConfigParser):
-    if 'HEROKU' in list(os.environ.keys()):
-        ON_HEROKU = bool(os.environ['HEROKU'])
-    else:
-        ON_HEROKU = False
-
-    if 'UNSTABLE' in list(os.environ.keys()):
-        UNSTABLE = bool(os.environ['UNSTABLE'])
-    else:
-        UNSTABLE = False
-
-    if 'TESTING' in list(os.environ.keys()):
-        PRODUCT = not bool(os.environ['TESTING'])
-    else:
-        PRODUCT = True
 
     def __init__(self):
         super().__init__()
+
         self.read('CONFIG.cfg')
+
+        for key in list(os.environ.keys()):
+            setattr(self, key, os.environ[key])
 
 
 config = Config()
