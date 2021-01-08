@@ -16,7 +16,7 @@ Once in a day trigger script via `Scheduler` (if `HEROKU`)
 - install `python3.8`
 - Either:
     - create environment variables `YNAB_TOKEN` and `CCAPI_TOKEN` with corresponding values
-    - create `CONFIG.cfg` in `main.py`'s directory as example given
+    - create `CONFIG.cfg` in `main.py`'s directory as in [example](#config-file-structure)
 - `pip install -r requitements.txt`
 - `python main.py`
 
